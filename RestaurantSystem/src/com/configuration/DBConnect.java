@@ -21,15 +21,12 @@ public static Connection getConnection()
 	Connection con=null;
 	try {
 		con=DriverManager.getConnection(url,user,pass);
+		//System.out.println("connection successfully");
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	return con;
-}
-public static void main(String[] args) {
-	getConnection();
-	
 }
 
 }			

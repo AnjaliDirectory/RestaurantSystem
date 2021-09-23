@@ -1,20 +1,23 @@
 package com.model;
 
+import java.sql.Time;
+
 public class Restaurant {
 	private int rid;
 	private String resName;
 	private String openingTime;
 	private String closingTime;
-	private String phoneNo;
+	private long phoneNo;
 	private String address_of_res;
 	private String cuisine;
+	private String isactive;
 	
+
 	public Restaurant() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	public Restaurant(int rid, String resName, String openingTime, String closingTime, String phoneNo,
+
+	public Restaurant(int rid, String resName, String openingTime, String closingTime, long phoneNo,
 			String address_of_res, String cuisine) {
 		super();
 		this.rid = rid;
@@ -24,18 +27,27 @@ public class Restaurant {
 		this.phoneNo = phoneNo;
 		this.address_of_res = address_of_res;
 		this.cuisine = cuisine;
+		
 	}
 
+	
+	public Restaurant(int rid, String resName, String openingTime, String closingTime,String address_of_res) {
+		super();
+		this.rid = rid;
+		this.resName = resName;
+		this.openingTime = openingTime;
+		this.closingTime = closingTime;
+	
+		this.address_of_res = address_of_res;
+	}
 
 	public int getRid() {
 		return rid;
 	}
 
-
 	public void setRid(int rid) {
 		this.rid = rid;
 	}
-
 
 	public String getResName() {
 		return resName;
@@ -61,11 +73,11 @@ public class Restaurant {
 		this.closingTime = closingTime;
 	}
 
-	public String getPhoneNo() {
+	public long getPhoneNo() {
 		return phoneNo;
 	}
 
-	public void setPhoneNo(String phoneNo) {
+	public void setPhoneNo(long phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 
@@ -86,8 +98,5 @@ public class Restaurant {
 	}
 
 	
-	
-	
-	
-	
+
 }
